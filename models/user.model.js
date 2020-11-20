@@ -16,13 +16,13 @@ const userSchema = new mongoose.Schema(
     famille: {
       type: String,
     },
-    Race: {
+    race: {
       type: String,
     },
-    Nourriture: {
+    nourriture: {
       type: String,
     },
-    Ami :{
+    ami :{
       type:[]
     }
   },

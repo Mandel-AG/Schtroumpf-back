@@ -5,7 +5,7 @@ const { checkAuthentification } = require('../config/authentification');
   
 
 app.use("/user",checkAuthentification, userRoute)
-app.use("/", checkAuthentification, authRoute)
+app.use("/", authRoute)
 
   
 

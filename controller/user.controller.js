@@ -1,6 +1,5 @@
 
 const User = require("../models/user.model")
-const bcrypt = require("bcrypt")
 
 
 exports.getUsers = async (req, res) => {
@@ -28,3 +27,31 @@ exports.updateUser = async (req, res, next) => {
   }
 }
 
+
+exports.getCurrentUser = async (req, res, next) => {
+  const userEmail = req.user.email
+  const user = await User.findOne({ email: userEmail })
+  res.send(user)
+}
+
+
+
+
+exports.addFriend = async (req, res, next) => {
+  try {
+    const { email, password, age, famille, race, nourriture } = req.body;
+   
+    const friend = {
+      email: email.trim(),
+      age: age.trim(),
+      famille: famille.trim(),
+      race: race.trim(),
+      nourriture: nourriture.trim(),
+      unique: true,
+    }
+    await User.findByIdAndUpdate({_id:req.params.id},{$push:{ami:friend}})
+    res.sendStatus(200)
+  } catch (error) {
+    next(error)
+  }
+}
