@@ -49,7 +49,7 @@ exports.addFriend = async (req, res, next) => {
       unique: true,
     }
     await User.findByIdAndUpdate({_id:req.params.id},{$push:{ami:friend}})
-    res.sendStatus(200)
+    res.json(friend)
   } catch (error) {
     next(error)
   }
