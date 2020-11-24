@@ -29,17 +29,22 @@ exports.updateUser = async (req, res, next) => {
 
 
 exports.getCurrentUser = async (req, res, next) => {
-  const userEmail = req.user.email
-  const user = await User.findOne({ email: userEmail })
-  res.send(user)
+  // const token = req.headers.authorization;
+  // const token = req.headers['cookie'].replace('token=','');
+  // console.log('get user',token)
+  // const userEmail = req.user.email
+  // const user = await User.findOne({ email: userEmail })
+  // res.send(user)
+  res.json(req.user)
 }
 
 
 
 
 exports.addFriend = async (req, res, next) => {
+  console.log(req)
   try {
-    const { email, password, age, famille, race, nourriture } = req.body;
+    const { email, age, famille, race, nourriture } = req.body;
    
     const friend = {
       email: email.trim(),

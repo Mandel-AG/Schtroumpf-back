@@ -1,7 +1,8 @@
 const app = require("express").Router();
 const User = require("../models/user.model")
 const bcrypt = require("bcrypt");
-const { createUser } = require("./user.controller")
+const { createUser } = require("./user.controller");
+const { response } = require("express");
 
 
 exports.loginUser = async(req, res, next) => {
@@ -36,7 +37,7 @@ exports.register = async (req, res, next) => {
       unique: true,
     })
     await user.save()
-    res.sendStatus(200)
+    req.login(user)
   } catch (error) {
     next(error)
   }

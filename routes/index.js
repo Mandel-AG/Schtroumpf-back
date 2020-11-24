@@ -1,11 +1,11 @@
 const userRoute = require("./user.route");
 const authRoute = require("./auth.route");
 const app = require("express").Router();
-const { checkAuthentification } = require('../config/authentification');
+const { checkAuthentification, isLoggedInn } = require('../config/authentification');
   
 
-app.use("/user",checkAuthentification, userRoute)
-app.use("/", authRoute)
+app.use("/back/user" , userRoute)
+app.use("/back", authRoute)
 
   
 
