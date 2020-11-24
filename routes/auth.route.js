@@ -1,6 +1,6 @@
 const app = require("express").Router();
-
 const { loginUser,logOut, register } = require("../controller/auth.controller");
+
 
 
 app.post('/register', register)

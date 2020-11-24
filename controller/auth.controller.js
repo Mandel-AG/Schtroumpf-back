@@ -1,9 +1,5 @@
-const app = require("express").Router();
 const User = require("../models/user.model")
 const bcrypt = require("bcrypt");
-const { createUser } = require("./user.controller");
-const { response } = require("express");
-
 
 exports.loginUser = async(req, res, next) => {
   const userEmail = await User.findOne({
