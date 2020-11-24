@@ -60,3 +60,13 @@ exports.addFriend = async (req, res, next) => {
     next(error)
   }
 }
+
+
+
+
+exports.deleteFriend = async(req, res, next) => {
+  const user = await User.findByIdAndUpdate({_id:req.params.id})
+  await User.findByIdAndUpdate({_id:req.params.id},{$pull:{ami:{email: req.params.email}}}, {new:true})
+  res.json(user)
+
+}

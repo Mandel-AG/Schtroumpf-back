@@ -4,7 +4,7 @@ const { checkAuthentification, isLoggedInn } = require('../config/authentificati
 const jwt = require("jsonwebtoken");
 
 
-const { getUsers, updateUser, getCurrentUser, addFriend } = require("../controller/user.controller");
+const { getUsers, updateUser, getCurrentUser, addFriend, deleteFriend } = require("../controller/user.controller");
 
 app.get("/", getUsers);
 
@@ -18,7 +18,7 @@ app.get("/currentUser", isLoggedInn, getCurrentUser);
 app.post("/addFriend/:id", addFriend);
 
 
-app.post("/deleteFriend/:id", addFriend);
+app.post("/deleteFriend/:id/:email", deleteFriend);
 
 
 
