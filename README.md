@@ -26,7 +26,7 @@ Enfin, on peut lancer le projet.</br>
 
 <h3>Desicrition du projet :</h3>
 
-Carnet d'adresse réalisé en 3 jours.
+Carnet d'adresse.
 Réalisé en Angular 9 et Node.
 Ajouter des amis avec leur informations.
 
