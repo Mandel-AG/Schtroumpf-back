@@ -7,7 +7,7 @@ ou </br>
 Télécharger le repository</strong>
 	
 </br>
-Ensuite on installe les dépendances.
+Ensuite on installe les dépendances.</br>
 </br>
 <em>npm install </em>
 
