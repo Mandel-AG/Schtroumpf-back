@@ -7,11 +7,12 @@ ou </br>
 Télécharger le repository</strong>
 	
 </br>
-Ensuite on installe les dépendances.
+Ensuite on installe les dépendances.</br>
 	<em>npm install </em>
   </br>
 	
 Enfin, on peut lancer le projet.</br>
+</br>
 	<em>npm start</em>
 	
 
@@ -40,7 +41,7 @@ Authentification, ajout et modifications d'amis...
 
 <h4>Infos</h4>
 
-Ce projet est divisé en 2 repositories : "Schtroumpf-front" (https://github.com/Mandel-AG/Schtroumpf-front.git) et "Schtroumpf-back".
+Ce projet est divisé en 2 repositories : "Schtroumpf-front" (https://github.com/Mandel-AG/Schtroumpf-front) et "Schtroumpf-back".
 
 
 
